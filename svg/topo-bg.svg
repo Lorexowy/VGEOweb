@@ -1,0 +1,44 @@
+<!-- Zapisz jako topo-bg.svg, wstaw do folderu /images lub innego -->
+<svg width="400" height="400" viewBox="0 0 400 400" fill="none" xmlns="http://www.w3.org/2000/svg">
+
+  <!-- Linia #1 -->
+  <path d="M0,50 
+           C50,20  100,80  150,50 
+           C200,20  250,80  300,50 
+           C350,20  400,80  400,50"
+        stroke="#000000"
+        stroke-opacity="0.1"
+        stroke-width="1"
+        fill="none" />
+
+  <!-- Linia #2 -->
+  <path d="M0,120 
+           C50,100 100,140 150,120 
+           C200,100 250,140 300,120 
+           C350,100 400,140 400,120"
+        stroke="#000000"
+        stroke-opacity="0.1"
+        stroke-width="1"
+        fill="none" />
+
+  <!-- Linia #3 -->
+  <path d="M0,200 
+           C60,180 80,250 150,210 
+           C220,170 260,210 300,200 
+           C340,190 380,220 400,200"
+        stroke="#000000"
+        stroke-opacity="0.1"
+        stroke-width="1"
+        fill="none" />
+
+  <!-- Linia #4 -->
+  <path d="M30,300 
+           C60,280 90,330 160,290 
+           C220,250 280,310 320,290 
+           C360,270 390,320 400,305"
+        stroke="#000000"
+        stroke-opacity="0.1"
+        stroke-width="1"
+        fill="none" />
+
+</svg>
