@@ -143,11 +143,11 @@ nav ul li a:hover::after {
 .hero-welcome {
   display: flex;
   color: white;
-  padding: 0;
   height: 100vh;
+  width: 100%;
 }
 
-.hero-welcome .half {
+.hero-welcome-half {
   flex: 1;
   background-size: cover;
   background-position: center;
@@ -156,43 +156,119 @@ nav ul li a:hover::after {
   align-items: center;
   justify-content: center;
   text-align: center;
-  padding: 0 2rem;
+  padding: 2rem;
+  position: relative;
+  overflow: hidden;
+  transition: all 0.5s ease;
 }
 
-.hero-welcome .left{
-  background: linear-gradient(rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.7)),
-              url("images/hero-bg.png") center/cover no-repeat;
-  transition: background 0.5s;
-}
-
-.hero-welcome .right{
-  background: linear-gradient(rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.7)),
-              url("images/dronybg.webp") center/cover no-repeat;
-  transition: background 0.5s;
-}
-
-.hero-welcome .left:hover{
-  background: linear-gradient(rgba(0, 0, 0, 0), rgba(0, 0, 0, 0.6)),
+.hero-welcome-half.left {
+  background: linear-gradient(rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.6)),
               url("images/hero-bg.png") center/cover no-repeat;
 }
 
-.hero-welcome .right:hover{
-  background: linear-gradient(rgba(0, 0, 0, 0), rgba(0, 0, 0, 0.6)),
+.hero-welcome-half.right {
+  background: linear-gradient(rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.6)),
               url("images/dronybg.webp") center/cover no-repeat;
 }
 
-.hero-welcome h2 {
-  font-size: 3rem;
-  margin-bottom: 1rem;
-  animation: fadeInDown 1s;
+.hero-welcome-content {
+  max-width: 500px;
+  z-index: 2;
+  opacity: 0;
+  transform: translateY(20px);
+  animation: fadeIn 0.8s ease forwards;
 }
 
-.hero-welcome p {
-  font-size: 1.2rem;
-  max-width: 600px;
-  margin: 0 auto 2rem;
+@keyframes fadeIn {
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+.hero-welcome-logo {
+  width: 400px;
+  height: auto;
+  margin-bottom: 1.5rem;
+  filter: drop-shadow(0 4px 8px rgba(0, 0, 0, 0.3));
+  transition: transform 0.3s ease;
+}
+
+.hero-welcome-title {
+  font-size: 2.5rem;
   margin-bottom: 1rem;
-  animation: fadeInDown 1s;
+  font-weight: 700;
+  text-shadow: 0 2px 4px rgba(0, 0, 0, 0.3);
+}
+
+.hero-welcome-description {
+  font-size: 1.1rem;
+  line-height: 1.6;
+  margin-bottom: 2rem;
+  text-shadow: 0 1px 2px rgba(0, 0, 0, 0.3);
+}
+
+.hero-welcome-half:hover {
+  flex: 1.2;
+}
+
+.hero-welcome-half:hover .hero-welcome-logo {
+  transform: scale(1.1);
+}
+
+.hero-welcome-half.left:hover {
+  background: linear-gradient(rgba(0, 0, 0, 0.4), rgba(0, 0, 0, 0.7)),
+              url("images/hero-bg.png") center/cover no-repeat;
+}
+
+.hero-welcome-half.right:hover {
+  background: linear-gradient(rgba(0, 0, 0, 0.4), rgba(0, 0, 0, 0.7)),
+              url("images/dronybg.webp") center/cover no-repeat;
+}
+
+/* Media queries dla responsywności hero-welcome */
+@media (max-width: 992px) {
+  .hero-welcome-half:hover {
+    flex: 1; /* Wyłączamy efekt rozszerzania na tabletach */
+  }
+  
+  .hero-welcome-title {
+    font-size: 2rem;
+  }
+}
+
+@media (max-width: 768px) {
+  .hero-welcome {
+    flex-direction: column;
+    height: auto;
+  }
+  
+  .hero-welcome-half {
+    min-height: 50vh;
+  }
+  
+  .hero-welcome-content {
+    padding: 3rem 1rem;
+  }
+  
+  .hero-welcome-description {
+    font-size: 1rem;
+  }
+}
+
+@media (max-width: 480px) {
+  .hero-welcome-half {
+    padding: 1.5rem;
+  }
+  
+  .hero-welcome-title {
+    font-size: 1.8rem;
+  }
+  
+  .hero-welcome-logo {
+    width: 150px;
+  }
 }
 
 .hero h2 {
