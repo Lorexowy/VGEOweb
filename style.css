@@ -848,3 +848,269 @@ footer {
       font-size: 2rem;
   }
 }
+
+/* Ciemny motyw dla strony drony.html */
+.hero-dark {
+  background: linear-gradient(rgba(0, 0, 0, 0.8), rgba(0, 0, 0, 0.8)),
+              url("images/drony.png") center/cover no-repeat;
+}
+
+.btn-outline {
+  background: transparent;
+  border: 2px solid var(--primary-red);
+  color: white;
+}
+
+.btn-outline:hover {
+  background: var(--primary-red);
+  color: white;
+}
+
+/* Sekcja usług dronowych */
+.drone-services {
+  background-color: #222;
+  color: white;
+  padding: 5rem 0;
+}
+
+.drone-services .section-title h2 {
+  color: white;
+}
+
+.drone-services .section-title p {
+  color: #ccc;
+}
+
+.drone-services-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
+  gap: 2rem;
+  margin-top: 3rem;
+}
+
+.drone-service-card {
+  background-color: rgba(255, 255, 255, 0.05);
+  border-radius: 10px;
+  padding: 2rem;
+  transition: var(--transition);
+  border: 1px solid rgba(255, 255, 255, 0.1);
+}
+
+.drone-service-card:hover {
+  transform: translateY(-10px);
+  background-color: rgba(255, 255, 255, 0.1);
+  border-color: var(--primary-red);
+}
+
+.drone-service-icon {
+  width: 70px;
+  height: 70px;
+  background-color: var(--primary-red);
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-bottom: 1.5rem;
+  font-size: 1.8rem;
+  color: white;
+}
+
+.drone-service-card h3 {
+  color: white;
+  margin-bottom: 1rem;
+}
+
+.drone-service-card p {
+  color: #ccc;
+}
+
+/* Portfolio dronowe */
+.drone-portfolio {
+  padding: 5rem 0;
+  background-color: #222;
+  color: white;
+}
+
+.drone-portfolio .section-title h2 {
+  color: white;
+}
+
+.drone-portfolio .section-title p {
+  color: #ccc;
+}
+
+.portfolio-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+  gap: 1.5rem;
+  margin-top: 3rem;
+}
+
+.portfolio-item {
+  position: relative;
+  overflow: hidden;
+  border-radius: 10px;
+  height: 250px;
+}
+
+.portfolio-item img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  transition: transform 0.6s ease;
+}
+
+.portfolio-overlay {
+  position: absolute;
+  bottom: -100%;
+  left: 0;
+  width: 100%;
+  padding: 1.5rem;
+  background: linear-gradient(transparent, rgba(0, 0, 0, 0.8));
+  color: white;
+  transition: bottom 0.4s ease;
+}
+
+.portfolio-item:hover img {
+  transform: scale(1.1);
+}
+
+.portfolio-item:hover .portfolio-overlay {
+  bottom: 0;
+}
+
+.portfolio-overlay h3 {
+  font-size: 1.2rem;
+  margin-bottom: 0.5rem;
+}
+
+.portfolio-overlay p {
+  font-size: 0.9rem;
+  opacity: 0.8;
+}
+
+/* Dostosowanie dla kontenera na stronie drony.html */
+.dark-section {
+  background-color: #333;
+  color: white;
+}
+
+.dark-section .section-title h2,
+.dark-section h3 {
+  color: white;
+}
+
+.dark-section p {
+  color: #ccc;
+}
+
+/* Animacja dla dronów */
+@keyframes float {
+  0% {
+      transform: translateY(0);
+  }
+  50% {
+      transform: translateY(-15px);
+  }
+  100% {
+      transform: translateY(0);
+  }
+}
+
+.drone-animation {
+  animation: float 6s ease-in-out infinite;
+}
+
+/* Sekcja przewag */
+.advantages-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
+  gap: 2rem;
+  margin-top: 3rem;
+}
+
+.advantage-card {
+  background-color: rgba(255, 255, 255, 0.05);
+  border-radius: 10px;
+  padding: 2rem;
+  transition: var(--transition);
+  border-left: 3px solid var(--primary-red);
+}
+
+.advantage-card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.2);
+}
+
+.advantage-number {
+  font-size: 3rem;
+  font-weight: 800;
+  color: rgba(255, 255, 255, 0.1);
+  margin-bottom: 1rem;
+}
+
+.advantage-card h3 {
+  position: relative;
+  margin-bottom: 1rem;
+}
+
+.advantage-card p {
+  line-height: 1.6;
+}
+
+/* Sekcja FAQ */
+.faq {
+  padding: 5rem 0;
+}
+
+.faq-container {
+  margin-top: 3rem;
+}
+
+.faq-item {
+  margin-bottom: 1rem;
+  border-radius: 10px;
+  overflow: hidden;
+  border: 1px solid rgba(255, 255, 255, 0.1);
+}
+
+.faq-question {
+  padding: 1.5rem;
+  background-color: rgba(255, 255, 255, 0.05);
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  cursor: pointer;
+  transition: var(--transition);
+}
+
+.faq-question:hover {
+  background-color: rgba(255, 255, 255, 0.1);
+}
+
+.faq-question h3 {
+  margin: 0;
+  font-size: 1.1rem;
+}
+
+.faq-icon {
+  font-size: 1.5rem;
+  font-weight: bold;
+  transition: var(--transition);
+}
+
+.faq-answer {
+  padding: 0 1.5rem;
+  max-height: 0;
+  overflow: hidden;
+  transition: max-height 0.3s ease;
+}
+
+.faq-item.active .faq-answer {
+  padding: 1.5rem;
+  max-height: 300px;
+}
+
+.faq-item.active .faq-icon {
+  transform: rotate(45deg);
+}
