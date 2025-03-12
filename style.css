@@ -924,69 +924,128 @@ footer {
   color: #ccc;
 }
 
-/* Portfolio dronowe */
-.drone-portfolio {
+/* Portfolio Alternating Layout */
+.portfolio-alternating {
   padding: 5rem 0;
   background-color: #222;
   color: white;
 }
 
-.drone-portfolio .section-title h2 {
+.portfolio-alternating .section-title h2 {
   color: white;
 }
 
-.drone-portfolio .section-title p {
+.portfolio-alternating .section-title p {
   color: #ccc;
 }
 
-.portfolio-grid {
-  display: grid;
-  grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
-  gap: 1.5rem;
-  margin-top: 3rem;
+.portfolio-items {
+  margin-top: 4rem;
 }
 
 .portfolio-item {
-  position: relative;
-  overflow: hidden;
+  display: flex;
+  margin-bottom: 5rem;
+  align-items: center;
+  background-color: rgba(255, 255, 255, 0.05);
   border-radius: 10px;
-  height: 250px;
+  overflow: hidden;
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.2);
+  transition: transform 0.3s ease;
 }
 
-.portfolio-item img {
+.portfolio-item:hover {
+  transform: translateY(-10px);
+}
+
+.portfolio-item.reverse {
+  flex-direction: row-reverse;
+}
+
+.portfolio-image {
+  flex: 1;
+  overflow: hidden;
+  min-height: 350px;
+}
+
+.portfolio-image img {
   width: 100%;
   height: 100%;
   object-fit: cover;
-  transition: transform 0.6s ease;
+  transition: transform 0.5s ease;
 }
 
-.portfolio-overlay {
-  position: absolute;
-  bottom: -100%;
-  left: 0;
-  width: 100%;
-  padding: 1.5rem;
-  background: linear-gradient(transparent, rgba(0, 0, 0, 0.8));
+.portfolio-item:hover .portfolio-image img {
+  transform: scale(1.05);
+}
+
+.portfolio-content {
+  flex: 1;
+  padding: 3rem;
+}
+
+.portfolio-content h3 {
   color: white;
-  transition: bottom 0.4s ease;
+  font-size: 1.8rem;
+  margin-bottom: 1.5rem;
+  position: relative;
 }
 
-.portfolio-item:hover img {
-  transform: scale(1.1);
+.portfolio-content h3:after {
+  content: '';
+  position: absolute;
+  left: 0;
+  bottom: -10px;
+  width: 50px;
+  height: 3px;
+  background-color: var(--primary-red);
 }
 
-.portfolio-item:hover .portfolio-overlay {
-  bottom: 0;
+.portfolio-item.reverse .portfolio-content h3:after {
+  left: 0;
 }
 
-.portfolio-overlay h3 {
-  font-size: 1.2rem;
+.portfolio-content p {
+  margin-bottom: 1.5rem;
+  color: #ccc;
+  line-height: 1.7;
+}
+
+.portfolio-content ul {
+  list-style: none;
+  padding: 0;
+}
+
+.portfolio-content ul li {
+  color: #ddd;
   margin-bottom: 0.5rem;
+  display: flex;
+  align-items: center;
 }
 
-.portfolio-overlay p {
-  font-size: 0.9rem;
-  opacity: 0.8;
+.portfolio-content ul li:before {
+  content: '✓';
+  color: var(--primary-red);
+  margin-right: 10px;
+  font-weight: bold;
+}
+
+/* Media queries for responsive design */
+@media (max-width: 992px) {
+  .portfolio-item,
+  .portfolio-item.reverse {
+      flex-direction: column;
+  }
+  
+  .portfolio-image {
+      width: 100%;
+      height: 300px;
+  }
+  
+  .portfolio-content {
+      width: 100%;
+      padding: 2rem;
+  }
 }
 
 /* Dostosowanie dla kontenera na stronie drony.html */
