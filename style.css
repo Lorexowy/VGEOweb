@@ -169,7 +169,7 @@ nav ul li a:hover::after {
 
 .hero-welcome-half.right {
   background: linear-gradient(rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.6)),
-              url("images/dronybg.webp") center/cover no-repeat;
+              url("images/herodronyvgeo.jpg") center/cover no-repeat;
 }
 
 .hero-welcome-content {
@@ -224,7 +224,7 @@ nav ul li a:hover::after {
 
 .hero-welcome-half.right:hover {
   background: linear-gradient(rgba(0, 0, 0, 0.4), rgba(0, 0, 0, 0.7)),
-              url("images/dronybg.webp") center/cover no-repeat;
+              url("images/herodronyvgeo.jpg") center/cover no-repeat;
 }
 
 /* Media queries dla responsywności hero-welcome */
@@ -852,7 +852,7 @@ footer {
 /* Ciemny motyw dla strony drony.html */
 .hero-dark {
   background: linear-gradient(rgba(0, 0, 0, 0.8), rgba(0, 0, 0, 0.8)),
-              url("images/drony.png") center/cover no-repeat;
+              url("images/herodronyvgeo.jpg") center/cover no-repeat;
 }
 
 .btn-outline {
