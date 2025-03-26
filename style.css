@@ -1121,6 +1121,39 @@ footer {
   animation: float 6s ease-in-out infinite;
 }
 
+/* Back to Top Button */
+.back-to-top {
+  position: fixed;
+  bottom: 30px;
+  right: 30px;
+  background-color: var(--primary-red);
+  color: white;
+  width: 50px;
+  height: 50px;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+  border: none;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+  opacity: 0;
+  visibility: hidden;
+  transition: all 0.3s ease;
+  z-index: 99;
+}
+
+.back-to-top:hover {
+  background-color: #d32b38;
+  transform: translateY(-3px);
+  box-shadow: 0 6px 15px rgba(230, 57, 70, 0.4);
+}
+
+.back-to-top.show {
+  opacity: 1;
+  visibility: visible;
+}
+
 /* ====================================
    11. MEDIA QUERIES & RESPONSIVENESS
 ==================================== */
