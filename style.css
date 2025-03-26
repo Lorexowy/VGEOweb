@@ -953,6 +953,36 @@ textarea.form-control {
   color: #ccc;
 }
 
+.contact-map {
+  margin-top: 2rem;
+  border-radius: 10px;
+  overflow: hidden;
+  box-shadow: 0 5px 15px rgba(0, 0, 0, 0.2);
+}
+
+.contact-map-full {
+  margin: 4rem 0 0;
+  height: 400px;
+  width: 100%;
+}
+
+.contact-map iframe {
+  display: block;
+  width: 100%;
+}
+
+/* Adjust the contact container for better responsiveness with the map */
+@media (max-width: 992px) {
+  .contact-container {
+      grid-template-columns: 1fr;
+      gap: 3rem;
+  }
+  
+  .contact-map {
+      height: 300px;
+  }
+}
+
 /* ====================================
    9. FOOTER
 ==================================== */
