@@ -175,6 +175,16 @@ nav ul li a:hover::after {
   padding: 8rem 0;
   height: 100vh;
   text-align: center;
+  justify-content: center;
+  align-items: center;
+}
+
+.hero .container {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  max-width: 1000px;
 }
 
 .hero h2 {
@@ -893,13 +903,15 @@ textarea.form-control {
 .portfolio-image {
   flex: 1;
   overflow: hidden;
-  min-height: 350px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
 }
+
 
 .portfolio-image img {
   width: 100%;
-  height: 100%;
-  object-fit: cover;
+  object-fit: contain;
   transition: transform 0.5s ease;
 }
 
