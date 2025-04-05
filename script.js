@@ -68,3 +68,16 @@ document.addEventListener('DOMContentLoaded', function() {
     header.classList.add('scrolled');
   }
 });
+
+document.addEventListener('DOMContentLoaded', function() {
+  const navLinks = document.querySelectorAll('.nav-menu a');
+  
+  navLinks.forEach(link => {
+    link.addEventListener('click', () => {
+      // Jeśli jesteśmy w trybie mobilnym (hamburger jest widoczny)
+      if (window.getComputedStyle(hamburger).display !== 'none') {
+        navMenu.classList.remove('active');
+      }
+    });
+  });
+});
