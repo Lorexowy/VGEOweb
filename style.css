@@ -1560,3 +1560,157 @@ header.scrolled .bar {
     width: 150px;
   }
 }
+
+/* ====================================
+   Process Section Styles
+==================================== */
+/* Ulepszone style dla sekcji Process z wyśrodkowanymi ikonami */
+.process-section {
+  padding: 5rem 0;
+  background-color: #f9f9f9;
+}
+
+.process-timeline {
+  position: relative;
+  padding-left: 60px;
+  margin: 4rem 0 2rem;
+}
+
+/* Ulepszona linia łącząca */
+.process-timeline::before {
+  content: '';
+  position: absolute;
+  top: 40px;
+  bottom: 40px;
+  left: 41px;
+  width: 3px;
+  background: linear-gradient(to bottom, transparent, #e63946, #e63946, transparent);
+  border-radius: 3px;
+  box-shadow: 0 0 10px rgba(230, 57, 70, 0.3);
+  z-index: 1;
+}
+
+.process-step {
+  display: flex;
+  margin-bottom: 3.5rem;
+  position: relative;
+}
+
+.process-step:last-child {
+  margin-bottom: 0;
+}
+
+/* Wyśrodkowane czerwone kółka z ikonami */
+.process-icon {
+  position: absolute;
+  left: -60px;
+  top: 50%; /* Wyśrodkowanie pionowe */
+  transform: translateY(-50%); /* Przesunięcie o połowę własnej wysokości */
+  background-color: #e63946;
+  min-width: 80px;
+  height: 80px;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  box-shadow: 0 5px 15px rgba(230, 57, 70, 0.4), 0 0 0 5px rgba(230, 57, 70, 0.1);
+  z-index: 2;
+  transition: all 0.3s ease;
+}
+
+.process-step:hover .process-icon {
+  transform: translateY(-50%) scale(1.1); /* Zachowanie wyśrodkowania przy powiększeniu */
+  box-shadow: 0 8px 20px rgba(230, 57, 70, 0.5), 0 0 0 8px rgba(230, 57, 70, 0.2);
+}
+
+/* Ulepszone ikony */
+.process-icon svg {
+  width: 32px;
+  height: 32px;
+  color: white;
+  filter: drop-shadow(0 2px 3px rgba(0, 0, 0, 0.2));
+}
+
+.process-content {
+  background-color: white;
+  padding: 2rem;
+  border-radius: 10px;
+  box-shadow: 0 5px 15px rgba(0, 0, 0, 0.05);
+  flex: 1;
+  position: relative;
+  transition: all 0.3s ease;
+  margin-left: 25px;
+}
+
+/* Wyśrodkowany trójkąt wskazujący */
+.process-content::before {
+  content: '';
+  position: absolute;
+  top: 50%; /* Wyśrodkowanie pionowe */
+  transform: translateY(-50%) rotate(45deg); /* Wyśrodkowanie i obrót */
+  left: -10px;
+  width: 20px;
+  height: 20px;
+  background-color: white;
+  box-shadow: -5px 5px 10px rgba(0, 0, 0, 0.05);
+  z-index: -1;
+}
+
+.process-step:hover .process-content {
+  transform: translateX(10px);
+  box-shadow: 0 10px 25px rgba(0, 0, 0, 0.08);
+}
+
+.process-content h3 {
+  color: #333;
+  margin-bottom: 1rem;
+  font-size: 1.5rem;
+}
+
+.process-content p {
+  color: #666;
+  line-height: 1.6;
+}
+
+/* Responsywność */
+@media (max-width: 768px) {
+  .process-timeline {
+    padding-left: 50px;
+  }
+  
+  .process-timeline::before {
+    left: 35px;
+  }
+  
+  .process-icon {
+    left: -50px;
+    min-width: 70px;
+    height: 70px;
+  }
+}
+
+@media (max-width: 576px) {
+  .process-timeline {
+    padding-left: 45px;
+  }
+  
+  .process-timeline::before {
+    left: 30px;
+  }
+  
+  .process-icon {
+    left: -45px;
+    min-width: 60px;
+    height: 60px;
+  }
+  
+  .process-icon svg {
+    width: 24px;
+    height: 24px;
+  }
+  
+  .process-content {
+    padding: 1.5rem;
+    margin-left: 15px;
+  }
+}
