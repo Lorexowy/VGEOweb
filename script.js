@@ -81,3 +81,21 @@ document.addEventListener('DOMContentLoaded', function() {
     });
   });
 });
+
+document.getElementById('contactForm').addEventListener('submit', function(event) {
+  event.preventDefault();
+  const name = document.getElementById('name').value.trim();
+  const email = document.getElementById('email').value.trim();
+  const message = document.getElementById('message').value.trim();
+  if (!name || !email || !message) {
+      alert("Proszę uzupełnić wszystkie pola.");
+      return;
+  }
+  const recipient = "biuro@vgeo.pl";
+  const subject = encodeURIComponent("Wiadomość od: " + name);
+  const body = encodeURIComponent(message + "\n\nKontakt zwrotny: " + email);
+  const mailtoLink = `mailto:${recipient}?subject=${subject}&body=${body}`;
+  if (confirm("Czy na pewno chcesz wysłać wiadomość?")) {
+      window.location.href = mailtoLink;
+  }
+});
